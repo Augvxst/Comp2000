@@ -1,6 +1,8 @@
 package com.example.comp2000;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,5 +22,30 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button Login_button = (Button) findViewById(R.id.login_button);
+        Login_button.setOnClickListener(x -> onLoginButtonclick());
+
+        Button resetpass_button = (Button) findViewById(R.id.reset_pass_button);
+        resetpass_button.setOnClickListener(x -> onResetPassButtonclick());
+
     }
+
+
+    void onLoginButtonclick() {
+        Intent intent = new Intent(this, homepage.class);
+        startActivity(intent);
+
+    }
+
+    void onResetPassButtonclick() {
+        Intent intent = new Intent(this, ForgotPassword.class);
+        startActivity(intent);
+    }
+
+    private void OnBackButtonClick() {
+        finish();
+    }
+
+
 }
