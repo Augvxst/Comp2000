@@ -30,12 +30,27 @@ public class homepage extends AppCompatActivity {
         Button Announcement_button = (Button) findViewById(R.id.AnnouncementButton);
         Announcement_button.setOnClickListener(x -> onAnnouncementsButtonclick());
 
+        Button Messages_button = (Button) findViewById(R.id.messagesButton);
+        Messages_button.setOnClickListener(x -> onMessagesButtonclick());
+
+        Button Bookings_button = (Button) findViewById(R.id.bookingButton);
+        Bookings_button.setOnClickListener(x -> onBookingsButtonclick());
+
     }
 
     void onAnnouncementsButtonclick() {
         Intent intent = new Intent(this, Announcements.class);
         startActivity(intent);
+    }
 
+    void onMessagesButtonclick() {
+        Intent intent = new Intent(this, messages.class);
+        startActivity(intent);
+    }
+
+    void onBookingsButtonclick() {
+        Intent intent = new Intent(this, bookings.class);
+        startActivity(intent);
     }
 
     private void animateText(TextView textView, String text) {

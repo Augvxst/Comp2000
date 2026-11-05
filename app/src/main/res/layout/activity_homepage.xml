@@ -113,7 +113,7 @@
         />
 
         <Button
-
+            android:id="@+id/messagesButton"
             app:backgroundTint="@color/Gold"
             android:layout_width="256dp"
             android:layout_height="64dp"
@@ -124,7 +124,7 @@
             />
 
         <Button
-
+        android:id="@+id/bookingButton"
         app:backgroundTint="@color/Gold"
         android:layout_width="256dp"
         android:layout_height="64dp"
