@@ -101,7 +101,7 @@
         >
 
         <Button
-
+        android:id="@+id/AnnouncementButton"
         app:backgroundTint="@color/Gold"
         android:layout_width="256dp"
         android:layout_height="64dp"

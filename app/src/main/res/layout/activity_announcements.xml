@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Announcements">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp"
+
+
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/house"
+            app:backgroundTint="@color/Gold"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+
+            />
+
+        <Button
+
+            android:background="@drawable/staff"
+            app:backgroundTint="@color/Gold"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+
+            />
+
+        <Button
+            android:background="@drawable/cog"
+            app:backgroundTint="@color/Gold"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="50dp"
+
+
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/returnbutton"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/Gold"
+
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="25dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/Gold"
+        android:textColor="@color/Gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/announcementsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Announcements"
+        android:fontFamily="@font/cinzel"
+        android:textColor="@color/Gold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="550dp"
+        android:textSize="30sp"
+        />
+
+    <ScrollView
+        android:id="@+id/announcementScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Gold"
+        android:padding="12dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintTop_toBottomOf="@id/announcementsText"
+        app:layout_constraintBottom_toTopOf="@id/messageInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/announcementContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Announcements will appear here.."
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/cinzel"
+            android:padding="10dp" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/messageInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="You do not have the permission to type"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@color/Gold"
+        android:padding="12dp"
+        android:textSize="16dp"
+        android:inputType="textMultiLine"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

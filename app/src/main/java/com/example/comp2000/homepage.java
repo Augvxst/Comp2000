@@ -1,7 +1,9 @@
 package com.example.comp2000;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +26,16 @@ public class homepage extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button Announcement_button = (Button) findViewById(R.id.AnnouncementButton);
+        Announcement_button.setOnClickListener(x -> onAnnouncementsButtonclick());
+
+    }
+
+    void onAnnouncementsButtonclick() {
+        Intent intent = new Intent(this, Announcements.class);
+        startActivity(intent);
+
     }
 
     private void animateText(TextView textView, String text) {
