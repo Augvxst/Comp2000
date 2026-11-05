@@ -31,7 +31,7 @@
                 />
 
     <Button
-
+        android:id="@+id/staffButton"
         android:background="@drawable/staff"
         app:backgroundTint="@color/Gold"
         android:layout_width="64dp"

@@ -27,6 +27,8 @@ public class messages extends AppCompatActivity {
             return insets;
         });
 
+        Button staffButton= (Button) findViewById(R.id.staffButton);
+        staffButton.setOnClickListener(x -> OnstaffButtonClick());
 
         Button messageButton= (Button) findViewById(R.id.sendMessage);
         messageButton.setOnClickListener(x -> OnMessageButtonClick());
@@ -54,6 +56,11 @@ public class messages extends AppCompatActivity {
 
         Button homeButton = (Button) findViewById(R.id.homeButton);
         homeButton.setOnClickListener(x -> OnhomeButtonClick());
+    }
+
+    private void OnstaffButtonClick(){
+        Intent intent = new Intent(this, Stafflist.class);
+        startActivity(intent);
     }
 
     private void  OnMessageButtonClick() {

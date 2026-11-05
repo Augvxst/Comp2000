@@ -27,6 +27,9 @@ public class homepage extends AppCompatActivity {
             return insets;
         });
 
+        Button staffbutton = (Button) findViewById(R.id.staffButton);
+        staffbutton.setOnClickListener(x -> onstaffButtonclick());
+
         Button Announcement_button = (Button) findViewById(R.id.AnnouncementButton);
         Announcement_button.setOnClickListener(x -> onAnnouncementsButtonclick());
 
@@ -38,6 +41,10 @@ public class homepage extends AppCompatActivity {
 
     }
 
+    void onstaffButtonclick() {
+        Intent intent = new Intent(this, Stafflist.class);
+        startActivity(intent);
+    }
     void onAnnouncementsButtonclick() {
         Intent intent = new Intent(this, Announcements.class);
         startActivity(intent);
@@ -49,7 +56,7 @@ public class homepage extends AppCompatActivity {
     }
 
     void onBookingsButtonclick() {
-        Intent intent = new Intent(this, bookings.class);
+        Intent intent = new Intent(this, bookingroomnum.class);
         startActivity(intent);
     }
 

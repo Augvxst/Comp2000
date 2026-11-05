@@ -31,7 +31,7 @@
             />
 
         <Button
-
+            android:id="@+id/staffButton"
             android:background="@drawable/staff"
             app:backgroundTint="@color/Gold"
             android:layout_width="64dp"
@@ -77,7 +77,7 @@
         />
 
     <TextView
-        android:id="@+id/announcementsText"
+        android:id="@+id/bookingTimeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bookings"
@@ -92,12 +92,12 @@
         />
 
     <Button
-        android:id="@+id/bookingButton"
+        android:id="@+id/bookingconfirmButton"
         app:backgroundTint="@color/Gold"
         android:layout_width="256dp"
         android:layout_height="64dp"
-        android:layout_marginTop="15dp"
-        android:text="My bookings"
+        android:layout_marginTop="100dp"
+        android:text="Confirm"
         android:fontFamily="@font/cinzel"
         android:textSize="18sp"
         android:textColor="@color/black"
@@ -106,7 +106,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="160dp"
         />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="160dp"
+        android:background="@color/Gold"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

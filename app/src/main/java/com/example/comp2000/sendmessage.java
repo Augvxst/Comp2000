@@ -27,6 +27,9 @@ public class sendmessage extends AppCompatActivity {
             return insets;
         });
 
+        Button staffButton = (Button) findViewById(R.id.staffButton);
+        staffButton.setOnClickListener(x -> OnstaffButtonClick());
+
         Button sendButton = (Button) findViewById(R.id.sendButton);
         sendButton.setOnClickListener(x -> OnSendButtonClick());
 
@@ -37,10 +40,16 @@ public class sendmessage extends AppCompatActivity {
         homeButton.setOnClickListener(x -> OnhomeButtonClick());
     }
 
+    private void OnstaffButtonClick(){
+        Intent intent = new Intent(this, Stafflist.class);
+        startActivity(intent);
+    }
+
     private void OnSendButtonClick(){
         MessageSentDialogFragment dialog = new MessageSentDialogFragment();
         dialog.show(getSupportFragmentManager(), "MessageSentDialog");
     }
+
     private void OnhomeButtonClick(){
         Intent intent = new Intent(this, homepage.class);
         startActivity(intent);
