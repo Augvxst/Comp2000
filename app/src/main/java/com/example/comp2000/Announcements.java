@@ -35,6 +35,14 @@ public class Announcements extends AppCompatActivity {
 
         Button staffButton = (Button) findViewById(R.id.staffButton);
         staffButton.setOnClickListener(x -> OnstaffButtonClick());
+
+        Button settingsButton = (Button) findViewById(R.id.settingsButton);
+        settingsButton.setOnClickListener(x -> OnsettingsButtonClick());
+    }
+
+    private void OnsettingsButtonClick() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
     }
 
     private void OnstaffButtonClick() {

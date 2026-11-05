@@ -40,6 +40,7 @@
         />
 
     <Button
+        android:id="@+id/settingsButton"
         android:background="@drawable/cog"
         app:backgroundTint="@color/Gold"
         android:layout_width="64dp"

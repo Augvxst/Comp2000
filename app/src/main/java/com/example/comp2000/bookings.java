@@ -38,6 +38,14 @@ public class bookings extends AppCompatActivity {
 
         Button bookingconfirmButton = (Button) findViewById(R.id.bookingconfirmButton);
         bookingconfirmButton.setOnClickListener(x -> OnbookingconfirmButtonClick());
+
+        Button settingsButton = (Button) findViewById(R.id.settingsButton);
+        settingsButton.setOnClickListener(x -> OnsettingsButtonClick());
+    }
+
+    private void OnsettingsButtonClick() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
     }
 
     private void OnstaffButtonClick() {

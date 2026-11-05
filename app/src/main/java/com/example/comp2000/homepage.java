@@ -39,8 +39,15 @@ public class homepage extends AppCompatActivity {
         Button Bookings_button = (Button) findViewById(R.id.bookingButton);
         Bookings_button.setOnClickListener(x -> onBookingsButtonclick());
 
+        Button Settingsbutton = (Button) findViewById(R.id.settingsButton);
+        Settingsbutton.setOnClickListener(x -> onsettingsButtonclick());
+
     }
 
+    void onsettingsButtonclick() {
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
+    }
     void onstaffButtonclick() {
         Intent intent = new Intent(this, Stafflist.class);
         startActivity(intent);

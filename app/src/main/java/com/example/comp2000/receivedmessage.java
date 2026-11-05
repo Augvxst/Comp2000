@@ -36,6 +36,14 @@ public class receivedmessage extends AppCompatActivity {
         Button homeButton = (Button) findViewById(R.id.homeButton);
         homeButton.setOnClickListener(x -> OnhomeButtonClick());
 
+        Button settingsButton = (Button) findViewById(R.id.settingsButton);
+        settingsButton.setOnClickListener(x -> OnsettingsButtonClick());
+
+    }
+
+    private void OnsettingsButtonClick()
+    {        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
     }
 
     private void OnstaffButtonClick()

@@ -35,6 +35,7 @@
             app:backgroundTint="@color/Gold" />
 
         <Button
+            android:id="@+id/settingsButton"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_marginStart="50dp"
